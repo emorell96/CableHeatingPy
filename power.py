@@ -72,12 +72,6 @@ def SteadyS_Equation(Tc, _wire = wire, _ambient = ambient, _current = current):
     # print(value)
     return value
 
-X = np.linspace(ambient.Ta, ambient.Ta + 80, 500)
-Y = Pr(X, wire, ambient)
-
-plt.plot(X, Y)
-plt.show()
-
 #find the zeros in function of Tc using numpy:
 conv_temp_rootout = root_scalar(SteadyS_Equation, x0=20, x1=120, rtol=0.0001)
 convection_temp = conv_temp_rootout.root
@@ -90,3 +84,9 @@ print(f"Temp of cable, no convection (deg C) = {no_convection_temp}")
 #epdm (insulation) has epsilon = 0.86
 
 #print("at Ta = {}".format(SteadyS_Equation(ambient.Ta+6e-1)))
+
+X = np.linspace(ambient.Ta, ambient.Ta + 80, 500)
+Y = Pr(X, wire, ambient)
+
+plt.plot(X, Y)
+plt.show()
