@@ -61,7 +61,7 @@ wire = Wire("3/0", 0.202704, 0.675, 0.86)
 
 ambient = Ambient("Lab air", 21.66, 0.0262, 0.1, 1.81e-5, 90)
 
-current = 288/1 # current in amps per wire (Sr uses 288 A total)
+current = 300/2 # current in amps per wire
 
 def SteadyS_Equation(Tc, _wire = wire, _ambient = ambient, _current = current):
     value = Pr(Tc, _wire, _ambient) + Pc(Tc, _wire, _ambient) - Pj(_wire, _current)
