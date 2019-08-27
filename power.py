@@ -53,7 +53,7 @@ def Pc(Tc, wire : Wire, ambient: Ambient):
 
 wire = Wire("3/0", 0.202704, 0.675, 0.86)
 ambient = Ambient("Lab air", 21.66, 0.0262, 0.1, 1.81e-5, 90)
-current = 288/1 #in amps
+current = 300/2 #in amps
 def SteadyS_Equation(Tc, _wire = wire, _ambient = ambient, _current = current):
     value = Pr(Tc, _wire, _ambient) + Pc(Tc, _wire, _ambient) - Pj(_wire, _current)
     # print("Joule = {} W/m".format(Pj(_wire, _current)))
