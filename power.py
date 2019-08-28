@@ -57,7 +57,7 @@ def Pc(Tc, wire : Wire, ambient: Ambient):
     return h*np.pi*(Tc-ambient.Ta)
 
 wire = Wire("3/0", 0.202704, 0.675, 0.86)
-
+#test commit
 ambient = Ambient("Lab air", 21.66, 0.0262, 0.1, 1.81e-5, 90)
 
 current = 300/2 # current in amps per wire
