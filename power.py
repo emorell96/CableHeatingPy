@@ -47,7 +47,6 @@ def Pj(wire : Wire, current):
     return wire.resistance*current**2
 
 def Pr(Tc, wire : Wire, ambient: Ambient):
-    #TK = Tc+273.15#
     return sigma*wire.emissivity*np.pi*wire.outdiameter*((Tc+273.15)**4 - (ambient.Ta+273.15)**4)
 
 def Pc(Tc, wire : Wire, ambient: Ambient):
